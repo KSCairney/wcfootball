@@ -1,3 +1,48 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:200,400,600');
+
+.titleblock {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+    color: #3f8220;
+    background-color: #ffffff;
+    font-size: 2.4em;
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+    margin: auto;
+}
+
+.login {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.login li a {
+    float: right;
+    list-style-type: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    color: #3f8220;
+}
+
+.login li a:hover, .login li a:focus {
+    float: right;
+    list-style-type: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.blg {
+    background-color: #3f8220;
+    height: 0.5em;
+}
+
+.blb {
+    background-color: #000000;
+    height: 0.5em;
+}
