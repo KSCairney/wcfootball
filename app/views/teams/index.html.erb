@@ -19,8 +19,10 @@
         <td><%= team.group_number %></td>
         <td><%= team.flag %></td>
         <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if signed_in? && current_user.admin? %>
+          <td><%= link_to 'Edit', edit_team_path(team) %></td>
+          <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,6 @@
 
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'New Team', new_team_path %>
+<% end %>

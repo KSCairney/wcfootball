@@ -1,6 +1,8 @@
 <h1>Editing Team</h1>
 
-<%= render 'form' %>
+<% if signed_in? && current_user.admin? %>
+    <%= render 'form' %>
+<% end %>
 
 <%= link_to 'Show', @team %> |
 <%= link_to 'Back', teams_path %>

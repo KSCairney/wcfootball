@@ -46,3 +46,27 @@
     background-color: #000000;
     height: 0.5em;
 }
+
+.sidesize {
+        height: 800px;
+    padding: 0;
+    margin: 0;
+}
+
+.sidepic {
+    background-image: url(/assets/sidebar.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fillpic1 {
+    background-color: #ffffff;
+    opacity: 1.0;
+    width: 110%;
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0)), linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top, left bottom;
+}
