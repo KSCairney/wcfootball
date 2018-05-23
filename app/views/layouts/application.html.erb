@@ -34,8 +34,14 @@
   </div>
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% if notice %>
+        <p id="notice" class="alert alert-info"><%= notice %></p>
+      <% end %>
+
+      <% if notice %>
+        <p id="notice" class="alert alert-info"><%= alert %></p>
+      <% end %>
+
     </div>
   </div>
 
