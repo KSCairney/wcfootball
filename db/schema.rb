@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523205444) do
+ActiveRecord::Schema.define(version: 20180523233012) do
+
+  create_table "picks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "team_id"
+    t.integer  "gp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "picks", ["team_id"], name: "index_picks_on_team_id"
+  add_index "picks", ["user_id"], name: "index_picks_on_user_id"
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"
