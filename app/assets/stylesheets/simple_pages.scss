@@ -48,9 +48,9 @@
 }
 
 .sidesize {
-        height: 800px;
-    padding: 0;
-    margin: 0;
+    height: 800px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .sidepic {
@@ -64,7 +64,7 @@
 .fillpic1 {
     background-color: #ffffff;
     opacity: 1.0;
-    width: 110%;
+    width: 105%;
     -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0)), linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
     -webkit-mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
