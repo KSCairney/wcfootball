@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'simple_pages/group_stage'
+
+  get 'simple_pages/ko_stage'
+
   get 'simple_pages/group_a'
 
   resources :teams

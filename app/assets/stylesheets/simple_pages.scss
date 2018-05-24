@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:200,400,600');
 
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 .titleblock {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 600;
@@ -48,7 +52,7 @@
 }
 
 .sidesize {
-    height: 800px;
+    height: 4200px;
     padding: 0px;
     margin: 0px;
 }
@@ -69,4 +73,24 @@
     -webkit-mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: left top, left bottom;
+}
+.flaggy {
+    height: 120px;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+
+.bubble {
+    background-color: #3f8220;
+    border: 10px solid #3f8220;
+    border-radius: 50%;
+    width:120px;
+    height:120px;
+}
+
+.flaggy img {
+    width: 100px;
+    height: auto;
+    padding: 10px 20px 10px 20px;
 }
