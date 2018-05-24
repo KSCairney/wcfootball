@@ -1,52 +1,52 @@
 <div class="row">
     <div class="col-xl-4 col-lg-4 col-md-4 hidden-sm hidden-xs sidepic sidesize"><div class="fillpic1 sidesize"></div></div>
     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-        <div>
+        <div class="groupsection">
             <h4>Group A</h4>
             <% @teams.order(:name).where(:group_number => "A").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group B</h4>
             <% @teams.order(:name).where(:group_number => "B").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %><%= team.name %> </div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group C</h4>
             <% @teams.order(:name).where(:group_number => "C").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group D</h4>
             <% @teams.order(:name).where(:group_number => "D").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group E</h4>
             <% @teams.order(:name).where(:group_number => "E").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group F</h4>
             <% @teams.order(:name).where(:group_number => "F").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group G</h4>
             <% @teams.order(:name).where(:group_number => "G").each do |team| %>
                 <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
-        <div>
+        <div class="groupsection">
             <h4>Group H</h4>
             <% @teams.order(:name).where(:group_number => "H").each do |team| %>
-                <div class="flaggy"><%= image_tag(team.flag) %>  <%= team.name %></div>
+                <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
             <% end %>
         </div>
     </div>
