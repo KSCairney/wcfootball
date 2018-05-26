@@ -29,22 +29,22 @@
   <tbody>
     <% @group_stage_winners.each do |group_stage_winner| %>
       <tr>
-        <td><%= group_stage_winner.groupa1 %></td>
-        <td><%= group_stage_winner.groupa2 %></td>
-        <td><%= group_stage_winner.groupb1 %></td>
-        <td><%= group_stage_winner.groupb2 %></td>
-        <td><%= group_stage_winner.groupc1 %></td>
-        <td><%= group_stage_winner.groupc2 %></td>
-        <td><%= group_stage_winner.groupd1 %></td>
-        <td><%= group_stage_winner.groupd2 %></td>
-        <td><%= group_stage_winner.groupe1 %></td>
-        <td><%= group_stage_winner.groupe2 %></td>
-        <td><%= group_stage_winner.groupf1 %></td>
-        <td><%= group_stage_winner.groupf2 %></td>
-        <td><%= group_stage_winner.groupg1 %></td>
-        <td><%= group_stage_winner.groupg2 %></td>
-        <td><%= group_stage_winner.grouph1 %></td>
-        <td><%= group_stage_winner.grouph2 %></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupa1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupa1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupa2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupa2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupb1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupb1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupb2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupb2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupc1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupc1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupc2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupc2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupd1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupd1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupd2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupd2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupe1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupe1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupe2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupe2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupf1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupf1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupf2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupf2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupg1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupg1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupg2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupg2 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.grouph1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.grouph1 %><% end %></div></td>
+        <td><div class="choice"><% @teams.where(:name => group_stage_winner.grouph2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.grouph2 %><% end %></div></td>
         <td><%= group_stage_winner.user %></td>
         <td><%= link_to 'Show', group_stage_winner %></td>
         <td><%= link_to 'Edit', edit_group_stage_winner_path(group_stage_winner) %></td>

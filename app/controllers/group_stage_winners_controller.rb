@@ -5,6 +5,7 @@ class GroupStageWinnersController < ApplicationController
   # GET /group_stage_winners.json
   def index
     @group_stage_winners = GroupStageWinner.all
+    @teams = Team.all
   end
 
   # GET /group_stage_winners/1
