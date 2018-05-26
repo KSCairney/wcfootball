@@ -1,0 +1,28 @@
+<%= form_for(@test_ko) do |f| %>
+  <% if @test_ko.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test_ko.errors.count, "error") %> prohibited this test_ko from being saved:</h2>
+
+      <ul>
+      <% @test_ko.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <% if @test_groups.first.name === "Egypt" %>
+    <% @teams.where(:name => "Egypt").each do |team| %>
+      <%= button_tag TestKo.create(:name => @test_groups.first.name) %>
+    <% end %>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team_id %><br>
+    <%= f.text_field :team_id %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<%= form_for(@test_group) do |f| %>
+  <% if @test_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test_group.errors.count, "error") %> prohibited this test_group from being saved:</h2>
+
+      <ul>
+      <% @test_group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div><h3>Group A</h3></div>
+  
+  
+  <% @teams.order(:name).where(:group_number => "A").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:name, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:name, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <% if current_user %>
+      Email:<%= current_user.email %>
+      Name: <%= current_user.first_name %> <%= current_user.last_name %>
+      <%= f.hidden_field :email, value: current_user.email %>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+  <%# @teams.where(:name => "Egypt").each do |team| %>
+      <%#= button_to team.name, {name: team.name}, class:"btn btn-default", style:"", method: :post, remote: true, params: { name: "Egypt" } %>
+  <%# end %>
+  <%# @teams.where(:name => "Russia").each do |team| %>
+      <%#= button_to team.name, {name: team.name}, class:"btn btn-default", style:"", method: :post, remote: true, params: { name: "Russia" } %>
+  <%# end %>
+  <%# @teams.where(:name => "Saudi Arabia").each do |team| %>
+      <%#= button_to team.name, {name: team.name}, class:"btn btn-default", style:"", method: :post, remote: true, params: { name: "Saudi Arabia" } %>
+  <%# end %>
+  <%# @teams.where(:name => "Uruguay").each do |team| %>
+      <%#= button_to team.name, {name: team.name}, class:"btn btn-default", style:"", method: :post, remote: true, params: { name: "Uruguay" } %>
+  <%# end %>
+
+<% end %>

@@ -1,0 +1,71 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  groupa1: MyString
+  groupa2: MyString
+  groupa1_flag: MyString
+  groupa2_flag: MyString
+  groupb1: MyString
+  groupb1: MyString
+  groupb2_flag: MyString
+  groupb2_flag: MyString
+  groupc1: MyString
+  groupc2: MyString
+  groupc1_flag: MyString
+  groupc2_flag: MyString
+  groupd1: MyString
+  groupd2: MyString
+  groupd1_flag: MyString
+  groupd2_flag: MyString
+  groupe1: MyString
+  groupe2: MyString
+  groupe1_flag: MyString
+  groupe2_flag: MyString
+  groupf1: MyString
+  groupf2: MyString
+  groupf1_flag: MyString
+  groupf2_flag: MyString
+  groupg1: MyString
+  groupg2: MyString
+  groupg1_flag: MyString
+  groupg2_flag: MyString
+  grouph1: MyString
+  grouph2: MyString
+  grouph1_flag: MyString
+  grouph2_flag: MyString
+  user: 
+
+two:
+  groupa1: MyString
+  groupa2: MyString
+  groupa1_flag: MyString
+  groupa2_flag: MyString
+  groupb1: MyString
+  groupb1: MyString
+  groupb2_flag: MyString
+  groupb2_flag: MyString
+  groupc1: MyString
+  groupc2: MyString
+  groupc1_flag: MyString
+  groupc2_flag: MyString
+  groupd1: MyString
+  groupd2: MyString
+  groupd1_flag: MyString
+  groupd2_flag: MyString
+  groupe1: MyString
+  groupe2: MyString
+  groupe1_flag: MyString
+  groupe2_flag: MyString
+  groupf1: MyString
+  groupf2: MyString
+  groupf1_flag: MyString
+  groupf2_flag: MyString
+  groupg1: MyString
+  groupg2: MyString
+  groupg1_flag: MyString
+  groupg2_flag: MyString
+  grouph1: MyString
+  grouph2: MyString
+  grouph1_flag: MyString
+  grouph2_flag: MyString
+  user: 

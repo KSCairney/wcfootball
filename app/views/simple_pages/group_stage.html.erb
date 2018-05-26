@@ -4,14 +4,27 @@
         <div class="groupsection">
             <h4>Group A</h4>
             <% @teams.order(:name).where(:group_number => "A").each do |team| %>
-                <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %></div>
+                <div class="flaggy"><%= image_tag(team.flag) %> <%= team.name %> 
+                    <%= form_tag do %>
+                        <%= radio_button_tag(:age, "First") %>
+                        <%= label_tag(:age_child, "1st") %>
+                        <%= radio_button_tag(:age, "Second") %>
+                        <%= label_tag(:age_child, "2nd") %>
+                        <%= radio_button_tag(:age, "Third") %>
+                        <%= label_tag(:age_child, "3rd") %>
+                        <%= radio_button_tag(:age, "Forth") %>
+                        <%= label_tag(:age_child, "4th") %>
+                    <% end %>
+                </div>
             <% end %>
         </div>
         <div class="groupsection">
             <h4>Group B</h4>
-            <% @teams.order(:name).where(:group_number => "B").each do |team| %>
-                <div class="flaggy"><%= image_tag(team.flag) %><%= team.name %> </div>
-            <% end %>
+            <div id="teams"  data-url="<%= sort_teams_path %>">
+                <% @teams.order(:name).where(:group_number => "B").each do |team| %>
+                    <div class="flaggy"><%= image_tag(team.flag) %><%= team.name %> </div>
+                <% end %>
+            </div>
         </div>
         <div class="groupsection">
             <h4>Group C</h4>

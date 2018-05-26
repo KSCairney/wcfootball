@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @test_ko.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @test_ko.user %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @test_ko.team %>
+</p>
+
+<%= link_to 'Edit', edit_test_ko_path(@test_ko) %> |
+<%= link_to 'Back', test_kos_path %>

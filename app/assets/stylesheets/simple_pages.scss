@@ -9,6 +9,7 @@ body {
 .groupsection {
     font-family: 'Montserrat Alternates', sans-serif;
     color: #3f8220;
+    margin-left: 50px;
 }
 
 .titleblock {
@@ -81,6 +82,9 @@ body {
     height: 120px;
     font-weight: 400;
     font-size: 1.3em;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 20px;
 }
 
 
@@ -96,4 +100,22 @@ body {
     width: 100px;
     height: auto;
     padding: 10px 20px 10px 20px;
+}
+
+#Afirst {
+    background-color: white;
+}
+
+.choices{
+    display: inline-block;
+}
+
+.choice {
+    height: 100px;
+    padding-right: 40px;
+    display: inline-block;
+}
+
+.choice img {
+    height:60px;
 }

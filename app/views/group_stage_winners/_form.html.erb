@@ -1,0 +1,169 @@
+<%= form_for(@group_stage_winner) do |f| %>
+  <% if @group_stage_winner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group_stage_winner.errors.count, "error") %> prohibited this group_stage_winner from being saved:</h2>
+
+      <ul>
+      <% @group_stage_winner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h3>1st in Group A</h3>
+  <% @teams.order(:name).where(:group_number => "A").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupa1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupa1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group A</h3>
+  <% @teams.order(:name).where(:group_number => "A").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupa2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupa2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group B</h3>
+  <% @teams.order(:name).where(:group_number => "B").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupb1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupb1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group B</h3>
+  <% @teams.order(:name).where(:group_number => "B").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupb2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupb2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group C</h3>
+  <% @teams.order(:name).where(:group_number => "C").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupc1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupc1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group C</h3>
+  <% @teams.order(:name).where(:group_number => "C").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupc2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupc2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group D</h3>
+  <% @teams.order(:name).where(:group_number => "D").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupd1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupd1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group D</h3>
+  <% @teams.order(:name).where(:group_number => "D").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupd2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupd2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group E</h3>
+  <% @teams.order(:name).where(:group_number => "E").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupe1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupe1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group E</h3>
+  <% @teams.order(:name).where(:group_number => "E").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupe2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupe2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group F</h3>
+  <% @teams.order(:name).where(:group_number => "F").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupf1, team.name, groupf1_flag: team.flag) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupf1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group F</h3>
+  <% @teams.order(:name).where(:group_number => "F").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupf2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupf2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group G</h3>
+  <% @teams.order(:name).where(:group_number => "G").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupg1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupg1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group G</h3>
+  <% @teams.order(:name).where(:group_number => "G").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:groupg2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:groupg2, team.name) %>
+    </div>
+  <% end %>
+  
+  <br>
+  <h3>1st in Group H</h3>
+  <% @teams.order(:name).where(:group_number => "H").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:grouph1, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:grouph1, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  <h3>2nd in Group H</h3>
+  <% @teams.order(:name).where(:group_number => "H").each do |team| %>
+    <div class="choice">
+      <%= radio_button_tag(:grouph2, team.name) %>
+      <%= image_tag(team.flag) %>
+      <%= label_tag(:grouph2, team.name) %>
+    </div>
+  <% end %>
+  <br>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

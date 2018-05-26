@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Group Stage Picks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>1st Group A</th>
+      <th>2nd Group A</th>
+      <th>1st Group B</th>
+      <th>2nd Group B</th>
+      <th>1st Group C</th>
+      <th>2nd Group C</th>
+      <th>1st Group D</th>
+      <th>2nd Group D</th>
+      <th>1st Group E</th>
+      <th>2nd Group E</th>
+      <th>1st Group F</th>
+      <th>2nd Group F</th>
+      <th>1st Group G</th>
+      <th>2nd Group G</th>
+      <th>1st Group H</th>
+      <th>2nd Group H</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_stage_winners.each do |group_stage_winner| %>
+      <tr>
+        <td><%= group_stage_winner.groupa1 %></td>
+        <td><%= group_stage_winner.groupa2 %></td>
+        <td><%= group_stage_winner.groupb1 %></td>
+        <td><%= group_stage_winner.groupb2 %></td>
+        <td><%= group_stage_winner.groupc1 %></td>
+        <td><%= group_stage_winner.groupc2 %></td>
+        <td><%= group_stage_winner.groupd1 %></td>
+        <td><%= group_stage_winner.groupd2 %></td>
+        <td><%= group_stage_winner.groupe1 %></td>
+        <td><%= group_stage_winner.groupe2 %></td>
+        <td><%= group_stage_winner.groupf1 %></td>
+        <td><%= group_stage_winner.groupf2 %></td>
+        <td><%= group_stage_winner.groupg1 %></td>
+        <td><%= group_stage_winner.groupg2 %></td>
+        <td><%= group_stage_winner.grouph1 %></td>
+        <td><%= group_stage_winner.grouph2 %></td>
+        <td><%= group_stage_winner.user %></td>
+        <td><%= link_to 'Show', group_stage_winner %></td>
+        <td><%= link_to 'Edit', edit_group_stage_winner_path(group_stage_winner) %></td>
+        <td><%= link_to 'Destroy', group_stage_winner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group stage winner', new_group_stage_winner_path %>

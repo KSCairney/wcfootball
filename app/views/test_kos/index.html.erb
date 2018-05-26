@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Test Kos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Team</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test_kos.each do |test_ko| %>
+      <tr>
+        <td><%= test_ko.name %></td>
+        <td><%= test_ko.user %></td>
+        <td><%= test_ko.team %></td>
+        <td><%= link_to 'Show', test_ko %></td>
+        <td><%= link_to 'Edit', edit_test_ko_path(test_ko) %></td>
+        <td><%= link_to 'Destroy', test_ko, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test ko', new_test_ko_path %>

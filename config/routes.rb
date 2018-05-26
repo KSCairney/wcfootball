@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+  resources :group_stage_winners
+  resources :test_kos
+  resources :test_groups
   get 'simple_pages/group_stage'
 
   get 'simple_pages/ko_stage'
 
   get 'simple_pages/group_a'
 
-  resources :teams
+  resources :teams do
+    collection do
+      patch :sort
+    end
+  end
+  
   devise_for :users
   resources :users
   root 'simple_pages#index'
