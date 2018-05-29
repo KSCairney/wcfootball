@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529182843) do
+ActiveRecord::Schema.define(version: 20180529223310) do
+
+  create_table "final_winners", force: :cascade do |t|
+    t.string   "champion"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "final_winners", ["user_id"], name: "index_final_winners_on_user_id"
 
   create_table "group_stage_winners", force: :cascade do |t|
     t.string   "groupa1"
@@ -140,6 +149,28 @@ ActiveRecord::Schema.define(version: 20180529182843) do
 
   add_index "picks", ["team_id"], name: "index_picks_on_team_id"
   add_index "picks", ["user_id"], name: "index_picks_on_user_id"
+
+  create_table "qf_winners", force: :cascade do |t|
+    t.string   "qf1_w"
+    t.string   "qf2_w"
+    t.string   "qf3_w"
+    t.string   "qf4_w"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "qf_winners", ["user_id"], name: "index_qf_winners_on_user_id"
+
+  create_table "sf_winners", force: :cascade do |t|
+    t.string   "sf1_w"
+    t.string   "sf2_w"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sf_winners", ["user_id"], name: "index_sf_winners_on_user_id"
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"

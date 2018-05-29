@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sf1 w:</strong>
+  <%= @sf_winner.sf1_w %>
+</p>
+
+<p>
+  <strong>Sf2 w:</strong>
+  <%= @sf_winner.sf2_w %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sf_winner.user.first_name %>
+</p>
+
+<%= link_to 'Edit', edit_sf_winner_path(@sf_winner) %> |
+<%= link_to 'Back', sf_winners_path %>

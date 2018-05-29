@@ -1,0 +1,92 @@
+<%= form_for(@qf_winner) do |f| %>
+  <% if @qf_winner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qf_winner.errors.count, "error") %> prohibited this qf_winner from being saved:</h2>
+
+      <ul>
+      <% @qf_winner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h3>Quarter Finals Game 1</h3>
+  <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
+    <% @teams.order(:name).where(:name => ko16_winner.a1_v_b2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf1_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf1_w, team.name) %>
+      </div>
+    <% end %>
+    <% @teams.order(:name).where(:name => ko16_winner.c1_v_d2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf1_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf1_w, team.name) %>
+      </div>
+    <% end %>
+  <% end %>
+  
+  <br>
+  <h3>Quarter Finals Game 2</h3>
+  <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
+    <% @teams.order(:name).where(:name => ko16_winner.e1_v_f2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf2_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf2_w, team.name) %>
+      </div>
+    <% end %>
+    <% @teams.order(:name).where(:name => ko16_winner.g1_v_h2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf2_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf2_w, team.name) %>
+      </div>
+    <% end %>
+  <% end %>
+  
+  <br>
+  <h3>Quarter Finals Game 3</h3>
+  <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
+    <% @teams.order(:name).where(:name => ko16_winner.b1_v_a2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf3_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf3_w, team.name) %>
+      </div>
+    <% end %>
+    <% @teams.order(:name).where(:name => ko16_winner.d1_v_c2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf3_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf3_w, team.name) %>
+      </div>
+    <% end %>
+  <% end %>
+  
+  <br>
+  <h3>Quarter Finals Game 4</h3>
+  <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
+    <% @teams.order(:name).where(:name => ko16_winner.f1_v_e2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf4_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf4_w, team.name) %>
+      </div>
+    <% end %>
+    <% @teams.order(:name).where(:name => ko16_winner.h1_v_g2).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:qf4_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:qf4_w, team.name) %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

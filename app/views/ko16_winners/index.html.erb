@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Ko16 Winners</h1>
+<h1>Round of 16</h1>
 
 <table>
   <thead>
     <tr>
-      <th>A1 v b2</th>
-      <th>C1 v d2</th>
-      <th>E1 v f2</th>
-      <th>G1 v h2</th>
-      <th>B1 v a2</th>
-      <th>D1 v c2</th>
-      <th>F1 v e2</th>
-      <th>H1 v g2</th>
+      <th>A1 v B2</th>
+      <th>C1 v D2</th>
+      <th>E1 v F2</th>
+      <th>G1 v H2</th>
+      <th>B1 v A2</th>
+      <th>D1 v C2</th>
+      <th>F1 v E2</th>
+      <th>H1 v G2</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
@@ -21,14 +21,14 @@
   <tbody>
     <% @ko16_winners.each do |ko16_winner| %>
       <tr>
-        <td><%= ko16_winner.a1_v_b2 %></td>
-        <td><%= ko16_winner.c1_v_d2 %></td>
-        <td><%= ko16_winner.e1_v_f2 %></td>
-        <td><%= ko16_winner.g1_v_h2 %></td>
-        <td><%= ko16_winner.b1_v_a2 %></td>
-        <td><%= ko16_winner.d1_v_c2 %></td>
-        <td><%= ko16_winner.f1_v_e2 %></td>
-        <td><%= ko16_winner.h1_v_g2 %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.a1_v_b2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.a1_v_b2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.c1_v_d2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.c1_v_d2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.e1_v_f2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.e1_v_f2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.g1_v_h2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.g1_v_h2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.b1_v_a2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.b1_v_a2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.d1_v_c2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.d1_v_c2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.f1_v_e2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.f1_v_e2 %><% end %></td>
+        <td><div class="choice"><% @teams.where(:name => ko16_winner.h1_v_g2).each do |team| %><%= image_tag(team.flag) %> <%= ko16_winner.h1_v_g2 %><% end %></td>
         <td><%= ko16_winner.user.first_name %></td>
         <td><%= link_to 'Show', ko16_winner %></td>
         <td><%= link_to 'Edit', edit_ko16_winner_path(ko16_winner) %></td>

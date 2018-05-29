@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qf1 w:</strong>
+  <%= @qf_winner.qf1_w %>
+</p>
+
+<p>
+  <strong>Qf2 w:</strong>
+  <%= @qf_winner.qf2_w %>
+</p>
+
+<p>
+  <strong>Qf3 w:</strong>
+  <%= @qf_winner.qf3_w %>
+</p>
+
+<p>
+  <strong>Qf4 w:</strong>
+  <%= @qf_winner.qf4_w %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @qf_winner.user.first_name %>
+</p>
+
+<%= link_to 'Edit', edit_qf_winner_path(@qf_winner) %> |
+<%= link_to 'Back', qf_winners_path %>

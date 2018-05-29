@@ -11,6 +11,7 @@
     </div>
   <% end %>
   
+  <h3>1st in Group A v 2nd in Group B</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupa1).each do |team| %>
       <div class="choice">
@@ -29,6 +30,7 @@
   <% end %>
   
   <br>
+  <h3>1st in Group C v 2nd in Group D</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupc1).each do |team| %>
       <div class="choice">
@@ -47,6 +49,7 @@
   <% end %>
   
   <br>
+  <h3>1st in Group E v 2nd in Group F</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupe1).each do |team| %>
       <div class="choice">
@@ -65,6 +68,7 @@
   <% end %>
   
   <br>
+  <h3>1st in Group G v 2nd in Group H</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupg1).each do |team| %>
       <div class="choice">
@@ -83,6 +87,7 @@
   <% end %>
   
   <br>
+  <h3>1st in Group B v 2nd in Group A</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupb1).each do |team| %>
       <div class="choice">
@@ -101,6 +106,7 @@
   <% end %>
   
   <br>
+  <h3>1st in Group D v 2nd in Group C</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupd1).each do |team| %>
       <div class="choice">
@@ -119,6 +125,7 @@
   <% end %>
     
   <br>
+  <h3>1st in Group F v 2nd in Group E</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.groupf1).each do |team| %>
       <div class="choice">
@@ -137,6 +144,7 @@
   <% end %>
       
   <br>
+  <h3>1st in Group H v 2nd in Group G</h3>
   <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
     <% @teams.order(:name).where(:name => group_stage_winner.grouph1).each do |team| %>
       <div class="choice">

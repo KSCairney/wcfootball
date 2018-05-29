@@ -1,0 +1,53 @@
+<%= form_for(@sf_winner) do |f| %>
+  <% if @sf_winner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sf_winner.errors.count, "error") %> prohibited this sf_winner from being saved:</h2>
+
+      <ul>
+      <% @sf_winner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h3>Semi Finals Game 1</h3>
+  <% @qf_winners.where(:user => current_user).each do |qf_winner| %>
+    <% @teams.order(:name).where(:name => qf_winner.qf1_w).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:sf1_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:sf1_w, team.name) %>
+      </div>
+    <% end %>
+    <% @teams.order(:name).where(:name => qf_winner.qf2_w).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:sf1_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:sf1_w, team.name) %>
+      </div>
+    <% end %>
+  <% end %>
+  
+  <h3>Semi Finals Game 2</h3>
+  <% @qf_winners.where(:user => current_user).each do |qf_winner| %>
+    <% @teams.order(:name).where(:name => qf_winner.qf3_w).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:sf2_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:sf2_w, team.name) %>
+      </div>
+    <% end %>
+    <% @teams.order(:name).where(:name => qf_winner.qf4_w).each do |team| %>
+      <div class="choice">
+        <%= radio_button_tag(:sf2_w, team.name) %>
+        <%= image_tag(team.flag) %>
+        <%= label_tag(:sf2_w, team.name) %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qf1_w: MyString
+  qf2_w: MyString
+  qf3_w: MyString
+  qf4_w: MyString
+  user_id: 
+
+two:
+  qf1_w: MyString
+  qf2_w: MyString
+  qf3_w: MyString
+  qf4_w: MyString
+  user_id: 

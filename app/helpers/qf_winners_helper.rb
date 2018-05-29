@@ -1,0 +1,2 @@
+module QfWinnersHelper
+end
