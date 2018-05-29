@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180526194309) do
+ActiveRecord::Schema.define(version: 20180529182843) do
 
   create_table "group_stage_winners", force: :cascade do |t|
     t.string   "groupa1"
@@ -50,6 +50,22 @@ ActiveRecord::Schema.define(version: 20180526194309) do
     t.string   "groupb2"
     t.string   "groupb1_flag"
   end
+
+  create_table "ko16_winners", force: :cascade do |t|
+    t.string   "a1_v_b2"
+    t.string   "c1_v_d2"
+    t.string   "e1_v_f2"
+    t.string   "g1_v_h2"
+    t.string   "b1_v_a2"
+    t.string   "d1_v_c2"
+    t.string   "f1_v_e2"
+    t.string   "h1_v_g2"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "ko16_winners", ["user_id"], name: "index_ko16_winners_on_user_id"
 
   create_table "picks", force: :cascade do |t|
     t.integer  "user_id"

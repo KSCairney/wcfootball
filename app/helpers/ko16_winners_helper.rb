@@ -1,0 +1,2 @@
+module Ko16WinnersHelper
+end

@@ -45,7 +45,7 @@
         <td><div class="choice"><% @teams.where(:name => group_stage_winner.groupg2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.groupg2 %><% end %></div></td>
         <td><div class="choice"><% @teams.where(:name => group_stage_winner.grouph1).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.grouph1 %><% end %></div></td>
         <td><div class="choice"><% @teams.where(:name => group_stage_winner.grouph2).each do |team| %><%= image_tag(team.flag) %> <%= group_stage_winner.grouph2 %><% end %></div></td>
-        <td><%= group_stage_winner.user %></td>
+        <td><%= group_stage_winner.user.first_name %></td>
         <td><%= link_to 'Show', group_stage_winner %></td>
         <td><%= link_to 'Edit', edit_group_stage_winner_path(group_stage_winner) %></td>
         <td><%= link_to 'Destroy', group_stage_winner, method: :delete, data: { confirm: 'Are you sure?' } %></td>

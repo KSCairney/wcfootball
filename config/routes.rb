@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ko16_winners
   resources :group_stage_winners
   resources :test_kos
   resources :test_groups

@@ -11,6 +11,7 @@ class GroupStageWinnersController < ApplicationController
   # GET /group_stage_winners/1
   # GET /group_stage_winners/1.json
   def show
+    @teams = Team.all
   end
 
   # GET /group_stage_winners/new
