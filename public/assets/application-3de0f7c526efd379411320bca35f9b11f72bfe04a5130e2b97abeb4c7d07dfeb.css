@@ -1,0 +1,351 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #3f8220;
+}
+
+/* line 10, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.groupsection {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #3f8220;
+  margin-left: 50px;
+}
+
+/* line 16, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.titleblock {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+  color: #3f8220;
+  background-color: #ffffff;
+  font-size: 2.4em;
+  padding: 40px 0px 0px 0px;
+  text-align: center;
+  margin: auto;
+}
+
+/* line 27, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.login {
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+/* line 32, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.login li a {
+  float: right;
+  list-style-type: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  color: #3f8220;
+}
+
+/* line 40, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.login li a:hover, .login li a:focus {
+  float: right;
+  list-style-type: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* line 49, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.blg {
+  background-color: #3f8220;
+  height: 0.5em;
+}
+
+/* line 54, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.blb {
+  background-color: #000000;
+  height: 0.5em;
+}
+
+/* line 59, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.sidesize {
+  height: 1100px;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 65, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.sidepic {
+  background-image: url(/assets/sidebar.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 73, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.fillpic1 {
+  background-color: #ffffff;
+  opacity: 1.0;
+  width: 105%;
+  -webkit-mask-image: linear-gradient(to left, black, rgba(0, 0, 0, 0)), linear-gradient(to left, black, rgba(0, 0, 0, 0));
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left top, left bottom;
+}
+
+/* line 82, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.flaggy {
+  height: 120px;
+  font-weight: 400;
+  font-size: 1.3em;
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+/* line 92, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.bubble {
+  background-color: #3f8220;
+  border: 10px solid #3f8220;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+/* line 100, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.flaggy img {
+  width: 100px;
+  height: auto;
+  padding: 10px 20px 10px 20px;
+}
+
+/* line 106, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+#Afirst {
+  background-color: white;
+}
+
+/* line 110, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.choices {
+  display: inline-block;
+}
+
+/* line 114, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.choice {
+  height: 100px;
+  padding-right: 40px;
+  display: inline-block;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* line 121, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.choice img {
+  height: 60px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* line 126, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.choice2 {
+  height: 100px;
+  padding-right: 40px;
+  display: inline-block;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* line 133, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.choice2 img {
+  height: 30px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* line 138, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+a {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* line 142, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+td a {
+  padding-left: 10px;
+}
+
+/* line 146, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.choicesect {
+  padding-left: 20px;
+}
+
+/* line 150, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.padthai {
+  margin: 30px 0px 0px 20px;
+}
+
+/* line 154, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.champdisplay {
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* line 160, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+#thechamp {
+  padding-top: 10px;
+  font-size: 2em;
+}
+
+/* line 165, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+#thechamp img {
+  height: 150px;
+  font-size: 2em;
+}
+
+/* line 170, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.rslts {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* line 176, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.resultrounds img {
+  height: 60px;
+}
+
+/* line 180, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.resultrounds p {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* line 184, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.buba, .bubb {
+  border-top: green solid 1px;
+  position: relative;
+}
+
+/* line 190, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.buba:after {
+  content: "";
+  width: 50%;
+  height: 1.1px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: -1px;
+}
+
+/* line 200, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.bubb:after {
+  content: "";
+  width: 50%;
+  height: 1.1px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+
+/* line 210, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.grpwnnrs {
+  display: inline-block;
+}
+
+/* line 214, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+.spaced {
+  padding: 0px 5px 0px 5px;
+}
+
+/* line 218, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+#frontpage p {
+  padding-top: 20px;
+}
+
+/* line 222, /home/ubuntu/workspace/app/assets/stylesheets/simple_pages.scss */
+p {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
