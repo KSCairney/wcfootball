@@ -1,6 +1,8 @@
-<h1>Editing Sf Winner</h1>
+<h1>Edit Semi-Finals Picks</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @sf_winner %> |
-<%= link_to 'Back', sf_winners_path %>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'Show', @sf_winner %> |
+    <%= link_to 'Back', sf_winners_path %>
+<% end %>

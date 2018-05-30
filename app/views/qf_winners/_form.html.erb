@@ -11,7 +11,8 @@
     </div>
   <% end %>
   
-  <h3>Quarter Finals Game 1</h3>
+  <div class="choicesect">
+  <h3>Quarter Final Game 1</h3>
   <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
     <% @teams.order(:name).where(:name => ko16_winner.a1_v_b2).each do |team| %>
       <div class="choice">
@@ -30,7 +31,7 @@
   <% end %>
   
   <br>
-  <h3>Quarter Finals Game 2</h3>
+  <h3>Quarter Final Game 2</h3>
   <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
     <% @teams.order(:name).where(:name => ko16_winner.e1_v_f2).each do |team| %>
       <div class="choice">
@@ -49,7 +50,7 @@
   <% end %>
   
   <br>
-  <h3>Quarter Finals Game 3</h3>
+  <h3>Quarter Final Game 3</h3>
   <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
     <% @teams.order(:name).where(:name => ko16_winner.b1_v_a2).each do |team| %>
       <div class="choice">
@@ -68,7 +69,7 @@
   <% end %>
   
   <br>
-  <h3>Quarter Finals Game 4</h3>
+  <h3>Quarter Final Game 4</h3>
   <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
     <% @teams.order(:name).where(:name => ko16_winner.f1_v_e2).each do |team| %>
       <div class="choice">
@@ -87,6 +88,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit Picks" %>
+  </div>
   </div>
 <% end %>

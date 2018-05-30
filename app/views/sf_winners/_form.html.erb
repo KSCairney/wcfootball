@@ -11,7 +11,8 @@
     </div>
   <% end %>
   
-  <h3>Semi Finals Game 1</h3>
+  <div class="choicesect">
+  <h3>Semi Final Game 1</h3>
   <% @qf_winners.where(:user => current_user).each do |qf_winner| %>
     <% @teams.order(:name).where(:name => qf_winner.qf1_w).each do |team| %>
       <div class="choice">
@@ -29,7 +30,7 @@
     <% end %>
   <% end %>
   
-  <h3>Semi Finals Game 2</h3>
+  <h3>Semi Final Game 2</h3>
   <% @qf_winners.where(:user => current_user).each do |qf_winner| %>
     <% @teams.order(:name).where(:name => qf_winner.qf3_w).each do |team| %>
       <div class="choice">
@@ -48,6 +49,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit Picks" %>
+  </div>
   </div>
 <% end %>

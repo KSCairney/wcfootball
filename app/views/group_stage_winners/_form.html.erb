@@ -11,6 +11,7 @@
     </div>
   <% end %>
   
+  <div class="choicesect">
   <h3>1st in Group A</h3>
   <% @teams.order(:name).where(:group_number => "A").each do |team| %>
     <div class="choice">
@@ -109,7 +110,7 @@
   <h3>1st in Group F</h3>
   <% @teams.order(:name).where(:group_number => "F").each do |team| %>
     <div class="choice">
-      <%= radio_button_tag(:groupf1, team.name, groupf1_flag: team.flag) %>
+      <%= radio_button_tag(:groupf1, team.name) %>
       <%= image_tag(team.flag) %>
       <%= label_tag(:groupf1, team.name) %>
     </div>
@@ -164,6 +165,7 @@
   <br>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit Picks" %>
+  </div>
   </div>
 <% end %>

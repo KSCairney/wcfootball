@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<div class="padthai">
 <p>
-  <strong>Sf1 w:</strong>
+  <strong>Semi-Final Game 1:</strong>
   <%= @sf_winner.sf1_w %>
 </p>
 
 <p>
-  <strong>Sf2 w:</strong>
+  <strong>Semi-Final Game 2:</strong>
   <%= @sf_winner.sf2_w %>
 </p>
 
@@ -14,6 +15,12 @@
   <strong>User:</strong>
   <%= @sf_winner.user.first_name %>
 </p>
+</div>
 
-<%= link_to 'Edit', edit_sf_winner_path(@sf_winner) %> |
-<%= link_to 'Back', sf_winners_path %>
+<div class="padthai nextbutton">
+  <%= link_to 'Edit', edit_sf_winner_path(@sf_winner) %> |
+  <%= link_to 'Next Round', new_final_winner_path %>
+</div>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Back', sf_winners_path %>
+<% end %>

@@ -40,4 +40,6 @@
 
 <br>
 
-<%= link_to 'New Ko16 winner', new_ko16_winner_path %>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'New Ko16 winner', new_ko16_winner_path %>
+<% end %>

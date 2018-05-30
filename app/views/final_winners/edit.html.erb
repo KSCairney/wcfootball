@@ -1,6 +1,8 @@
-<h1>Editing Final Winner</h1>
+<h1>Edit Final Pick/h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @final_winner %> |
-<%= link_to 'Back', final_winners_path %>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'Show', @final_winner %> |
+    <%= link_to 'Back', final_winners_path %>
+<% end %>

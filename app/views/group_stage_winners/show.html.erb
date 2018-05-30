@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="padthai">
 <p>
   <strong>1st in Group A:</strong>
   <%= @group_stage_winner.groupa1 %>
@@ -84,6 +85,12 @@
   <strong>User:</strong>
   <%= @group_stage_winner.user.first_name %>
 </p>
+</div>
 
-<%= link_to 'Edit', edit_group_stage_winner_path(@group_stage_winner) %> |
-<%= link_to 'Back', group_stage_winners_path %>
+<div class="padthai nextbutton">
+  <%= link_to 'Edit', edit_group_stage_winner_path(@group_stage_winner) %> |
+  <%= link_to 'Next Round', new_ko16_winner_path %>
+</div>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'Back', group_stage_winners_path %>
+<% end %>

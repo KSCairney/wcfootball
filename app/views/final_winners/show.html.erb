@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="padthai">
 <p>
   <strong>Champion:</strong>
   <%= @final_winner.champion %>
@@ -9,6 +10,12 @@
   <strong>User:</strong>
   <%= @final_winner.user.first_name %>
 </p>
+</div>
 
+<div class="padthai nextbutton">
 <%= link_to 'Edit', edit_final_winner_path(@final_winner) %> |
-<%= link_to 'Back', final_winners_path %>
+<%= link_to 'Results', simple_pages_results_path %>
+</div>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Back', final_winners_path %>
+<% end %>

@@ -1,5 +1,7 @@
-<h1>New Ko16 Winner</h1>
+<h1>New Round of 16 Picks</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', ko16_winners_path %>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to "Back", ko16_winners_path %>
+<% end %>

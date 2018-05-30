@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @group_stage_winner %> |
-<%= link_to 'Back', group_stage_winners_path %>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'Show', @group_stage_winner %> |
+    <%= link_to 'Back', group_stage_winners_path %>
+<% end %>

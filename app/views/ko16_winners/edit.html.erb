@@ -1,6 +1,8 @@
-<h1>Editing Ko16 Winner</h1>
+<h1>Edit Round of 16 Picks</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @ko16_winner %> |
-<%= link_to 'Back', ko16_winners_path %>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'Show', @ko16_winner %> |
+    <%= link_to 'Back', ko16_winners_path %>
+<% end %>

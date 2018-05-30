@@ -11,25 +11,27 @@
     </div>
   <% end %>
   
-  <h3>The World Cup Final</h3>
-  <% @sf_winners.where(:user => current_user).each do |sf_winner| %>
-    <% @teams.order(:name).where(:name => sf_winner.sf1_w).each do |team| %>
-      <div class="choice">
-        <%= radio_button_tag(:champion, team.name) %>
-        <%= image_tag(team.flag) %>
-        <%= label_tag(:champion, team.name) %>
-      </div>
+  <div class="choicesect">
+    <h3>The World Cup Final</h3>
+    <% @sf_winners.where(:user => current_user).each do |sf_winner| %>
+      <% @teams.order(:name).where(:name => sf_winner.sf1_w).each do |team| %>
+        <div class="choice">
+          <%= radio_button_tag(:champion, team.name) %>
+          <%= image_tag(team.flag) %>
+          <%= label_tag(:champion, team.name) %>
+        </div>
+      <% end %>
+      <% @teams.order(:name).where(:name => sf_winner.sf2_w).each do |team| %>
+        <div class="choice">
+          <%= radio_button_tag(:champion, team.name) %>
+          <%= image_tag(team.flag) %>
+          <%= label_tag(:champion, team.name) %>
+        </div>
+      <% end %>
     <% end %>
-    <% @teams.order(:name).where(:name => sf_winner.sf2_w).each do |team| %>
-      <div class="choice">
-        <%= radio_button_tag(:champion, team.name) %>
-        <%= image_tag(team.flag) %>
-        <%= label_tag(:champion, team.name) %>
-      </div>
-    <% end %>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit "Submit Pick" %>
+    </div>
   </div>
 <% end %>

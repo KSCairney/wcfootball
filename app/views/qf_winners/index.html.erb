@@ -32,4 +32,6 @@
 
 <br>
 
-<%= link_to 'New Qf winner', new_qf_winner_path %>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'New Qf winner', new_qf_winner_path %>
+<% end %>

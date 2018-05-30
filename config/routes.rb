@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'simple_pages/results'
+
   resources :final_winners
   resources :sf_winners
   resources :qf_winners

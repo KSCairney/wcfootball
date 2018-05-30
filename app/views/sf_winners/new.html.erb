@@ -1,5 +1,7 @@
-<h1>New Sf Winner</h1>
+<h1>New Semi-Finals Picks</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', sf_winners_path %>
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'Back', sf_winners_path %>
+<% end %>

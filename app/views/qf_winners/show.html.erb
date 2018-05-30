@@ -1,22 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<div class="padthai">
 <p>
-  <strong>Qf1 w:</strong>
+  <strong>Quarter-Final Game 1:</strong>
   <%= @qf_winner.qf1_w %>
 </p>
 
 <p>
-  <strong>Qf2 w:</strong>
+  <strong>Quarter-Final Game 2:</strong>
   <%= @qf_winner.qf2_w %>
 </p>
 
 <p>
-  <strong>Qf3 w:</strong>
+  <strong>Quarter-Final Game 3:</strong>
   <%= @qf_winner.qf3_w %>
 </p>
 
 <p>
-  <strong>Qf4 w:</strong>
+  <strong>Quarter-Final Game 4:</strong>
   <%= @qf_winner.qf4_w %>
 </p>
 
@@ -24,6 +25,12 @@
   <strong>User:</strong>
   <%= @qf_winner.user.first_name %>
 </p>
+</div>
 
-<%= link_to 'Edit', edit_qf_winner_path(@qf_winner) %> |
-<%= link_to 'Back', qf_winners_path %>
+<div class="padthai nextbutton">
+  <%= link_to 'Edit', edit_qf_winner_path(@qf_winner) %> |
+  <%= link_to 'Next Round', new_sf_winner_path %>
+</div>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Back', qf_winners_path %>
+<% end %>
