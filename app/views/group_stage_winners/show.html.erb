@@ -89,7 +89,13 @@
 
 <div class="padthai nextbutton">
   <%= link_to 'Edit', edit_group_stage_winner_path(@group_stage_winner) %> |
-  <%= link_to 'Next Round', new_ko16_winner_path %>
+  <% if @ko16_winners.where(:user => current_user).exists? %>
+    <% @ko16_winners.where(:user => current_user).each do |ko16_winner| %>
+      <%= link_to 'Next Round', edit_ko16_winner_path(ko16_winner) %>
+    <% end %>
+  <% else %>
+    <%= link_to 'Next Round', new_ko16_winner_path %>
+  <% end %>
 </div>
 <% if signed_in? && current_user.admin? %>
     <%= link_to 'Back', group_stage_winners_path %>

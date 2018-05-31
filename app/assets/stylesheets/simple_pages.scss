@@ -35,6 +35,7 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 400;
     color: #3f8220;
+    padding-right: 10px;
 }
 
 .login li a:hover, .login li a:focus {
@@ -221,4 +222,30 @@ td a {
 
 p {
    font-family: 'Montserrat Alternates', sans-serif; 
+}
+
+.pickedchampion {
+    text-align: left;
+    width: 120px;
+}
+
+.frontchoice img {
+    height: 100px;
+}
+
+.frontchoice {
+    text-align: center;
+    margin: auto;
+    width: auto;
+}
+
+
+.cntr {
+    text-align: center;
+    margin: auto;
+}
+
+.rsltslinks a {
+    font-size: 1.5em;
+    font-weight: 600;
 }

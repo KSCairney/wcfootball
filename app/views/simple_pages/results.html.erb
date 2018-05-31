@@ -252,8 +252,12 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 rsltslinks cntr">
+        <br>
+        <br>
+        <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
+          <%= link_to 'Edit Picks', edit_group_stage_winner_path(group_stage_winner) %>
+        <% end %>
     </div>
 </div>
 

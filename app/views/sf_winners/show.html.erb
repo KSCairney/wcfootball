@@ -19,7 +19,13 @@
 
 <div class="padthai nextbutton">
   <%= link_to 'Edit', edit_sf_winner_path(@sf_winner) %> |
-  <%= link_to 'Next Round', new_final_winner_path %>
+  <% if @final_winners.where(:user => current_user).exists? %>
+    <% @final_winners.where(:user => current_user).each do |final_winner| %>
+      <%= link_to 'Next Round', edit_final_winner_path(final_winner) %>
+    <% end %>
+  <% else %>
+    <%= link_to 'Next Round', new_final_winner_path %>
+  <% end %>
 </div>
 <% if signed_in? && current_user.admin? %>
   <%= link_to 'Back', sf_winners_path %>

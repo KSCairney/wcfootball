@@ -12,6 +12,12 @@ class GroupStageWinnersController < ApplicationController
   # GET /group_stage_winners/1.json
   def show
     @teams = Team.all
+    @group_stage_winners = GroupStageWinner.all
+    @qf_winners = QfWinner.all
+    @sf_winners = SfWinner.all
+    @ko16_winners = Ko16Winner.all
+    @final_winners = FinalWinner.all
+    @users = User.all
   end
 
   # GET /group_stage_winners/new
