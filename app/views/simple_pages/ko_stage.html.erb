@@ -1,2 +1,257 @@
-<h1>SimplePages#ko_stage</h1>
-<p>Find me in app/views/simple_pages/ko_stage.html.erb</p>
+<% @users.order(:last_name, :first_name). each do |user| %>
+    <h3><%= user.first_name %> <%= user.last_name %></h3>
+    
+    <div class="row champdisplay">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <% @final_winners.where(:user => user).each do |final_winner| %>
+                <% @teams.order(:name).where(:name => final_winner.champion).each do |team| %>
+                    <div id="thechamp"><%= image_tag(team.flag) %></div>
+                    <div id="thechamp"><%= final_winner.champion %></div>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+    <div class="row rslts">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 bubb">
+            <% @sf_winners.where(:user => user).each do |sf_winner| %>
+                <% @teams.order(:name).where(:name => sf_winner.sf1_w).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= sf_winner.sf1_w %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 buba">
+            <% @sf_winners.where(:user => user).each do |sf_winner| %>
+                <% @teams.order(:name).where(:name => sf_winner.sf2_w).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= sf_winner.sf2_w %></div>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+    <div class="row rslts">
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 bubb">
+            <% @qf_winners.where(:user => user).each do |qf_winner| %>
+                <% @teams.order(:name).where(:name => qf_winner.qf1_w).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= qf_winner.qf1_w %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 buba">
+            <% @qf_winners.where(:user => user).each do |qf_winner| %>
+                <% @teams.order(:name).where(:name => qf_winner.qf2_w).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= qf_winner.qf2_w %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 bubb">
+            <% @qf_winners.where(:user => user).each do |qf_winner| %>
+                <% @teams.order(:name).where(:name => qf_winner.qf3_w).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= qf_winner.qf3_w %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 buba">
+            <% @qf_winners.where(:user => user).each do |qf_winner| %>
+                <% @teams.order(:name).where(:name => qf_winner.qf4_w).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= qf_winner.qf4_w %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+    <div class="row rslts">
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.a1_v_b2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.a1_v_b2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.c1_v_d2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.c1_v_d2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.e1_v_f2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.e1_v_f2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.g1_v_h2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.g1_v_h2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.b1_v_a2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.b1_v_a2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.d1_v_c2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.d1_v_c2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.f1_v_e2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.f1_v_e2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% @teams.order(:name).where(:name => ko16_winner.h1_v_g2).each do |team| %>
+                    <div class="resultrounds"><%= image_tag(team.flag) %></div>
+                    <div class="resultrounds"><%= ko16_winner.h1_v_g2 %></div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+    <div class="row rslts">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupa1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupa1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupb2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupb2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupc1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupc1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupd2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupd2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupe1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupe1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupf2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupf2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupg1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupg1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.grouph2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.grouph2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupb1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupb1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupa2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupa2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupd1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupd1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupc2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupc2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupf1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupf1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupe2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupe2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs bubb">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.grouph1).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.grouph1 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="grpwnnrs buba">
+                <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                    <% @teams.order(:name).where(:name => group_stage_winner.groupg2).each do |team| %>
+                        <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= group_stage_winner.groupg2 %></p></div>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+<% end %> 

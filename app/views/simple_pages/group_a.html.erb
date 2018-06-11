@@ -3,3 +3,39 @@
     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
     </div>
 </div>
+
+<h5>Champion:</h5>
+    <% @final_winners.where(:user => user).each do |final_winner| %>
+        <% @teams.order(:name).where(:name => final_winner.champion).each do |team| %>
+            <div class="pickedchampion">
+                <div class="brackbigchoice"><%= image_tag(team.flag) %></div>
+            </div>
+        <% end %>
+    <% end %>
+    <br>
+    <h5>Final:</h5>
+    <% @sf_winners.where(:user => user).each do |sf_winner| %>
+        <% @teams.where(:name => sf_winner.sf1_w).each do |team| %>
+            <div class="pickedchampion">
+                <div class="bracketchoice"><%= image_tag(team.flag) %></div>
+            </div>
+        <% end %>
+        <% @teams.where(:name => sf_winner.sf2_w).each do |team| %>
+            <div class="pickedchampion">
+                <div class="bracketchoice"><%= image_tag(team.flag) %></div>
+            </div>
+        <% end %>
+    <% end %>
+    <h5>Semi-Finals:</h5>
+    <% @sf_winners.where(:user => user).each do |sf_winner| %>
+        <% @teams.where(:name => sf_winner.sf1_w).each do |team| %>
+            <div class="pickedchampion">
+                <div class="bracketchoice"><%= image_tag(team.flag) %></div>
+            </div>
+        <% end %>
+        <% @teams.where(:name => sf_winner.sf2_w).each do |team| %>
+            <div class="pickedchampion">
+                <div class="bracketchoice"><%= image_tag(team.flag) %></div>
+            </div>
+        <% end %>
+    <% end %>

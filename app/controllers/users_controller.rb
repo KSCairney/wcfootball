@@ -5,12 +5,25 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @teams = Team.all
+    @group_stage_winners = GroupStageWinner.all
+    @qf_winners = QfWinner.all
+    @sf_winners = SfWinner.all
+    @ko16_winners = Ko16Winner.all
+    @final_winners = FinalWinner.all
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @teams = Team.all
+    @group_stage_winners = GroupStageWinner.all
+    @qf_winners = QfWinner.all
+    @sf_winners = SfWinner.all
+    @ko16_winners = Ko16Winner.all
+    @final_winners = FinalWinner.all
+    @users = User.all
   end
 
   # GET /users/new
