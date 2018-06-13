@@ -1,4 +1,4 @@
-<% @users.order(:last_name, :first_name). each do |user| %>
+<% @users.order(:last_name, :first_name).each do |user| %>
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
             <h3><%= user.first_name %> <%= user.last_name %></h3>
