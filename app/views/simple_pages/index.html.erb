@@ -39,8 +39,8 @@
                 <% @teams.order(:name).where(:name => final_winner.champion).each do |team| %>
                 <div class="pickedchampion">
                     <div class="frontchoice"><%= image_tag(team.flag) %></div>
-                    <div class="frontchoice"><%= final_winner.user.first_name.capitalize %></div>
-                    <div class="frontchoice"><%= final_winner.user.last_name.capitalize %></div>
+                    <div class="frontchoice"><%= final_winner.user.first_name.titleize %></div>
+                    <div class="frontchoice"><%= final_winner.user.last_name.titleize %></div>
                 </div>
                 <% end %>
             <% end %>
