@@ -11,12 +11,11 @@
                 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
                 <br>
                 <br>
+                <%= link_to 'Hall of Brackets', simple_pages_ko_stage_path %>
+                <br>
+                <br>
                 <% if @group_stage_winners.where(:user => current_user).exists? %>
                     <%= link_to 'Results', simple_pages_results_path %>
-                    <br>
-                    <br>
-                    <%= link_to 'Hall of Brackets', simple_pages_ko_stage_path %>
-                <% else %>
                 <% end %>
             <% else %>
                 <%= link_to('Login/Sign Up', new_user_session_path) %>
@@ -40,8 +39,8 @@
                 <% @teams.order(:name).where(:name => final_winner.champion).each do |team| %>
                 <div class="pickedchampion">
                     <div class="frontchoice"><%= image_tag(team.flag) %></div>
-                    <div class="frontchoice"><%= final_winner.user.first_name %></div>
-                    <div class="frontchoice"><%= final_winner.user.last_name %></div>
+                    <div class="frontchoice"><%= final_winner.user.first_name.capitalize %></div>
+                    <div class="frontchoice"><%= final_winner.user.last_name.capitalize %></div>
                 </div>
                 <% end %>
             <% end %>
