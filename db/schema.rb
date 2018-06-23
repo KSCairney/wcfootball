@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529223310) do
+ActiveRecord::Schema.define(version: 20180620195529) do
 
   create_table "final_winners", force: :cascade do |t|
     t.string   "champion"
@@ -150,6 +150,13 @@ ActiveRecord::Schema.define(version: 20180529223310) do
   add_index "picks", ["team_id"], name: "index_picks_on_team_id"
   add_index "picks", ["user_id"], name: "index_picks_on_user_id"
 
+  create_table "placements", force: :cascade do |t|
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "qf_winners", force: :cascade do |t|
     t.string   "qf1_w"
     t.string   "qf2_w"
@@ -203,6 +210,7 @@ ActiveRecord::Schema.define(version: 20180529223310) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "admin",                  default: false, null: false
+    t.integer  "points"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

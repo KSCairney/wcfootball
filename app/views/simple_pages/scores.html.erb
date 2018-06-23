@@ -1,0 +1,29 @@
+<h1>Scoreboard</h1>
+
+<% @users.order(:points).each do |user| %>
+    <%= user.first_name.titleize %> <%= user.last_name.titleize %><%= user.points %>
+    <br>
+<% end %>
+<br>
+<% if signed_in? && current_user.admin? %>
+    <br>
+    <br>
+    <h5>Group A Scores</h5>
+    <% @users.order(:last_name, :first_name).each do |user| %>
+        <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+            <% if group_stage_winner.groupa1 == 'Russia' && group_stage_winner.groupa2 == 'Uruguay' %>
+                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +4
+                <br>
+            <% elsif group_stage_winner.groupa1 == 'Russia' && group_stage_winner.groupa2 != 'Uruguay' || group_stage_winner.groupa1 != 'Russia' && group_stage_winner.groupa2 == 'Uruguay' || group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 == 'Russia' %>
+                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +2
+                <br>
+            <% elsif group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 != 'Russia' || group_stage_winner.groupa1 != 'Uruguay' && group_stage_winner.groupa2 == 'Russia' %>
+                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +1
+                <br>
+            <% else %>
+                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +0
+                <br>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>

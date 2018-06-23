@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'simple_pages/scores'
+
+  resources :placements
   get 'simple_pages/results'
 
   resources :final_winners
@@ -24,6 +27,8 @@ Rails.application.routes.draw do
   resources :users
   root 'simple_pages#index'
   get 'simple_pages/index'
+  
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

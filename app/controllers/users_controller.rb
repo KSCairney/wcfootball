@@ -34,7 +34,8 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
-
+  
+  
   # POST /users
   # POST /users.json
   def create
@@ -64,6 +65,7 @@ class UsersController < ApplicationController
       end
     end
   end
+
 
   # DELETE /users/1
   # DELETE /users/1.json

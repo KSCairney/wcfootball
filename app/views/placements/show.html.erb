@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @placement.locale %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @placement.name %>
+</p>
+
+<%= link_to 'Edit', edit_placement_path(@placement) %> |
+<%= link_to 'Back', placements_path %>
