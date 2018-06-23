@@ -1,10 +1,51 @@
 <h1>Scoreboard</h1>
-
-<% @users.order(:points).each do |user| %>
-    <%= user.first_name.titleize %> <%= user.last_name.titleize %><%= user.points %>
-    <br>
+<div class="row colname">
+    <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        Rank
+    </div>
+    <div class="col-xl-5 col-lg-7 col-md-7 col-sm-8 col-xs-9">
+        Name
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        Score  
+    </div>
+    <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+</div>
+<% @users.order(:points).each_with_index do |user, i| %>
+    <div class="row ranker">
+        <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <%= (i + 1) %>
+        </div>
+        <div class="col-xl-5 col-lg-7 col-md-7 col-sm-8 col-xs-9">
+            <%= user.first_name.titleize %> <%= user.last_name.titleize %>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <%= user.points %>
+        </div>
+        <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
 <% end %>
 <br>
+<div class="row">
+    <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-xl-5 col-lg-7 col-md-7 col-sm-8 col-xs-9">
+        <p>Scoring breakdown:</p>
+        <ul>
+            <li>Correct advancement to knockout stage +1</li>
+            <li>Correct advancement to knockout stage and placement in group +2*</li>
+            <li>Correct advancement to quarter finals +4</li>
+            <li>Correct advancement to semi finals +7</li>
+            <li>Correct advancement to final +12</li>
+            <li>Correct Champion +20</li>
+        </ul>
+        <p>*Actual location in the bracket only matters for group stage placement.</p>
+        <p>ex. player predicts group H. 1st Belgium, 2nd Tunisia. Real results have 1st Belgium, 2nd England. Player receives 2 points for Belgium, 0 for Tunisia</p>
+        <p>ex. player predicts group H. 1st England, 2nd Belgium. Real results have 1st Belgium, 2nd England. Player receives 1 points for England, 1 for Belgium</p>
+    </div>
+    <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+</div>
 <% if signed_in? && current_user.admin? %>
     <br>
     <br>

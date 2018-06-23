@@ -264,6 +264,13 @@ p {
     height: 40px;
 }
 
-.nothing {
-    height: 10px;
+.ranker {
+    padding: 5px 0px 5px 0px;
+    border-bottom: solid green 1px;
+    font-size: 1.3em;
+}
+
+.colname {
+    font-size: 2em;
+    padding-bottom: 10px;
 }

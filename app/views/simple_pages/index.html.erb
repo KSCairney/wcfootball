@@ -14,21 +14,35 @@
                 <%= link_to 'Hall of Brackets', simple_pages_ko_stage_path %>
                 <br>
                 <br>
+                <%= link_to 'Scoreboard', simple_pages_scores_path %>
+                <br>
+                <br>
                 <% if @group_stage_winners.where(:user => current_user).exists? %>
                     <%= link_to 'Results', simple_pages_results_path %>
+                    <br>
+                    <br>
                 <% end %>
             <% else %>
                 <%= link_to('Login/Sign Up', new_user_session_path) %>
                 <br>
                 <br>
-                <%= link_to 'Hall of Brackets', simple_pages_ko_stage_path %>
+                <%= link_to 'Hall of Brackets', simple_pages_ko_stage_path %>\
+                <br>
+                <br>
+                <%= link_to 'Scoreboard', simple_pages_scores_path %>
+                <br>
+                <br>
             <% end %>
             <% if signed_in? && current_user.admin? %>
                 <% @group_stage_winners.where(:user => current_user).each do |group_stage_winner| %>
                      <%= link_to 'Edit Picks', edit_group_stage_winner_path(group_stage_winner) %>
+                     <br>
+                     <br>
                 <% end %>
                 <% if @group_stage_winners.where(:user => current_user).exists? %>
                     <%= link_to 'Make Your Picks', new_group_stage_winner_path %>
+                    <br>
+                    <br>
                 <% end %>
             <% end %>
         </div>
