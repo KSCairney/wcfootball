@@ -12,7 +12,7 @@
     </div>
     <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 </div>
-<% @users.order(:points).each_with_index do |user, i| %>
+<% @users.order(points: :desc).each_with_index do |user, i| %>
     <div class="row ranker">
         <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
