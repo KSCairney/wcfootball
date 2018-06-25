@@ -50,21 +50,29 @@
     <br>
     <br>
     <% @users.order(:last_name, :first_name).each do |user| %>
+        <%= user.first_name.titleize %> <%= user.last_name.titleize %>
         <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
-            <h5>Group A</h5>
             <% if group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 == 'Russia' %>
-                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +4
-                <br>
+                <h5>Group A +4</h5>
             <% elsif group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 != 'Russia' || group_stage_winner.groupa1 != 'Uruguay' && group_stage_winner.groupa2 == 'Russia' || group_stage_winner.groupa1 == 'Russia' && group_stage_winner.groupa2 == 'Uruguay' %>
-                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +2
-                <br>
+                <h5>Group A +2</h5>
             <% elsif group_stage_winner.groupa1 == 'Russia' && group_stage_winner.groupa2 != 'Uruguay' || group_stage_winner.groupa1 != 'Russia' && group_stage_winner.groupa2 == 'Uruguay' %>
-                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +1
-                <br>
+                <h5>Group A +1</h5>
             <% else %>
-                <%= user.first_name.titleize %> <%= user.last_name.titleize %> +0
-                <br>
+                <h5>Group A +0</h5>
             <% end %>
         <% end %>
+        <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+            <% if group_stage_winner.groupb1 == 'Spain' && group_stage_winner.groupb2 == 'Portugal' %>
+                <h5>Group B +4</h5>
+            <% elsif group_stage_winner.groupb1 == 'Spain' && group_stage_winner.groupb2 != 'Portugal' || group_stage_winner.groupb1 != 'Spain' && group_stage_winner.groupb2 == 'Portugal' || group_stage_winner.groupb1 == 'Portugal' && group_stage_winner.groupb2 == 'Spain' %>
+                <h5>Group B +2</h5>
+            <% elsif group_stage_winner.groupb1 == 'Portugal' && group_stage_winner.groupb2 != 'Spain' || group_stage_winner.groupb1 != 'Portugal' && group_stage_winner.groupb2 == 'Spain' %>
+                <h5>Group B +1</h5>
+            <% else %>
+                <h5>Group B +0</h5>
+            <% end %>
+        <% end %>
+        <br>
     <% end %>
 <% end %>
