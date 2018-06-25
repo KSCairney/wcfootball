@@ -1,7 +1,7 @@
 <h1>Scoreboard</h1>
 <div class="row colname">
-    <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    <div class="col-xl-2 col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-1">
         Rank
     </div>
     <div class="col-xl-5 col-lg-7 col-md-7 col-sm-8 col-xs-9">
@@ -10,12 +10,12 @@
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
         Score  
     </div>
-    <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-xl-2 col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
 </div>
 <% @users.order(points: :desc).each_with_index do |user, i| %>
     <div class="row ranker">
-        <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        <div class="col-xl-2 col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-1">
             <%= (i + 1) %>
         </div>
         <div class="col-xl-5 col-lg-7 col-md-7 col-sm-8 col-xs-9">
@@ -24,7 +24,7 @@
         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <%= user.points %>
         </div>
-        <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col-xl-2 col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
     </div>
 <% end %>
 <br>
