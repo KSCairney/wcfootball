@@ -80,7 +80,7 @@
 </div>
 <br>
 
-<% @users.order(:points).each do |user| %>
+<% @users.order(paoints: :desc).each do |user| %>
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
             <h3><%= user.first_name.titleize %> <%= user.last_name.titleize %></h3>
