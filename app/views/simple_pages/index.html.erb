@@ -18,7 +18,7 @@
                 <br>
                 <br>
                 <% if @group_stage_winners.where(:user => current_user).exists? %>
-                    <%= link_to 'Results', simple_pages_results_path %>
+                    <%= link_to 'My Results', simple_pages_results_path %>
                     <br>
                     <br>
                 <% end %>
