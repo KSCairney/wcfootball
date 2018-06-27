@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
             <h3><%= user.first_name.titleize %> <%= user.last_name.titleize %></h3>
+            <h4>Total Score: <%= user.points %></h4>
         </div>
     </div>
     
@@ -256,6 +257,59 @@
                     <% end %>
                 <% end %>
             </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
+            <h4>Score Breakdown:</h4>
+            <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
+                <% if group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 == 'Russia' %>
+                    <h5>Group A +4</h5>
+                <% elsif group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 != 'Russia' || group_stage_winner.groupa1 != 'Uruguay' && group_stage_winner.groupa2 == 'Russia' || group_stage_winner.groupa1 == 'Russia' && group_stage_winner.groupa2 == 'Uruguay' %>
+                    <h5>Group A +2</h5>
+                <% elsif group_stage_winner.groupa1 == 'Russia' && group_stage_winner.groupa2 != 'Uruguay' || group_stage_winner.groupa1 != 'Russia' && group_stage_winner.groupa2 == 'Uruguay' %>
+                    <h5>Group A +1</h5>
+                <% else %>
+                    <h5>Group A +0</h5>
+                <% end %>
+                <% if group_stage_winner.groupb1 == 'Spain' && group_stage_winner.groupb2 == 'Portugal' %>
+                    <h5>Group B +4</h5>
+                <% elsif group_stage_winner.groupb1 == 'Spain' && group_stage_winner.groupb2 != 'Portugal' || group_stage_winner.groupb1 != 'Spain' && group_stage_winner.groupb2 == 'Portugal' || group_stage_winner.groupb1 == 'Portugal' && group_stage_winner.groupb2 == 'Spain' %>
+                    <h5>Group B +2</h5>
+                <% elsif group_stage_winner.groupb1 == 'Portugal' && group_stage_winner.groupb2 != 'Spain' || group_stage_winner.groupb1 != 'Portugal' && group_stage_winner.groupb2 == 'Spain' %>
+                    <h5>Group B +1</h5>
+                <% else %>
+                    <h5>Group B +0</h5>
+                <% end %>
+                <% if group_stage_winner.groupc1 == 'France' && group_stage_winner.groupc2 == 'Denmark' %>
+                    <h5>Group C +4</h5>
+                <% elsif group_stage_winner.groupc1 == 'France' && group_stage_winner.groupc2 != 'Denmark' || group_stage_winner.groupc1 != 'France' && group_stage_winner.groupc2 == 'Denmark' || group_stage_winner.groupc1 == 'Denmark' && group_stage_winner.groupc2 == 'France' %>
+                   <h5>Group C +2</h5>
+                <% elsif group_stage_winner.groupc1 == 'Denmark' && group_stage_winner.groupc2 != 'France' || group_stage_winner.groupc1 != 'Denmark' && group_stage_winner.groupc2 == 'France' %>
+                    <h5>Group C +1</h5>
+                <% else %>
+                    <h5>Group C +0</h5>
+                <% end %>
+                <% if group_stage_winner.groupd1 == 'Croatia' && group_stage_winner.groupd2 == 'Argentina' %>
+                    <h5>Group D +4</h5>
+                <% elsif group_stage_winner.groupd1 == 'Croatia' && group_stage_winner.groupd2 != 'Argentina' || group_stage_winner.groupd1 != 'Croatia' && group_stage_winner.groupd2 == 'Argentina' || group_stage_winner.groupd1 == 'Argentina' && group_stage_winner.groupd2 == 'Croatia' %>
+                    <h5>Group D +2</h5>
+                <% elsif group_stage_winner.groupd1 == 'Argentina' && group_stage_winner.groupd2 != 'Croatia' || group_stage_winner.groupd1 != 'Argentina' && group_stage_winner.groupd2 == 'Croatia' %>
+                    <h5>Group D +1</h5>
+                <% else %>
+                    <h5>Group D +0</h5>
+                <% end %>
+                <% if group_stage_winner.groupf1 == 'Sweden' && group_stage_winner.groupf2 == 'Mexico' %>
+                   <h5>Group F +4</h5>
+                <% elsif group_stage_winner.groupf1 == 'Sweden' && group_stage_winner.groupf2 != 'Mexico' || group_stage_winner.groupf1 != 'Sweden' && group_stage_winner.groupf2 == 'Mexico' || group_stage_winner.groupf1 == 'Mexico' && group_stage_winner.groupf2 == 'Sweden' %>
+                    <h5>Group F +2</h5>
+                <% elsif group_stage_winner.groupf1 == 'Mexico' && group_stage_winner.groupf2 != 'Sweden' || group_stage_winner.groupf1 != 'Mexico' && group_stage_winner.groupf2 == 'Sweden' %>
+                    <h5>Group F +1</h5>
+                <% else %>
+                    <h5>Group F +0</h5>
+                <% end %>
+            <% end %>
         </div>
     </div>
     <br>
