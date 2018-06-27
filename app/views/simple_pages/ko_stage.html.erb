@@ -1,4 +1,86 @@
-<% @users.order(:last_name, :first_name).each do |user| %>
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
+        <h3>Real Results:</h3>
+    </div>
+</div>
+<div class="row rslts">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="grpwnnrs bubb">
+            <% @teams.order(:name).where(:name => "Uruguay").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs buba">
+            <% @teams.order(:name).where(:name => "Portugal").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs bubb">
+            <% @teams.order(:name).where(:name => "France").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs buba">
+            <% @teams.order(:name).where(:name => "Argentina").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs bubb">
+        </div>
+        <div class="grpwnnrs buba">
+            <% @teams.order(:name).where(:name => "Mexico").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs bubb">
+        </div>
+        <div class="grpwnnrs buba">
+        </div>
+    </div>
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+        <div class="grpwnnrs bubb">
+            <% @teams.order(:name).where(:name => "Spain").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs buba">
+            <% @teams.order(:name).where(:name => "Russia").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs bubb">
+            <% @teams.order(:name).where(:name => "Croatia").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs buba">
+            <% @teams.order(:name).where(:name => "Denmark").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs bubb">
+            <% @teams.order(:name).where(:name => "Sweden").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
+        </div>
+        <div class="grpwnnrs buba">
+        </div>
+        <div class="grpwnnrs bubb">
+        </div>
+        <div class="grpwnnrs buba">
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 blg"></div>
+</div>
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 blb">
+</div>
+<br>
+
+<% @users.order(:points).each do |user| %>
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
             <h3><%= user.first_name.titleize %> <%= user.last_name.titleize %></h3>
