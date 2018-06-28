@@ -108,7 +108,7 @@
             <% end %>
             <% if group_stage_winner.grouph1 == 'Colombia' && group_stage_winner.grouph2 == 'Japan' %>
                 <h5>Group H +4</h5>
-            <% elsif group_stage_winner.grouph1 == 'Colombia' && group_stage_winner.grouph2 != 'Japan' || group_stage_winner.grouph1 != 'Colombia' && group_stage_winner.grouph2 == 'Japan' || group_stage_winner.grouph1 == 'Mexico' && group_stage_winner.grouph2 == 'Japan' %>
+            <% elsif group_stage_winner.grouph1 == 'Colombia' && group_stage_winner.grouph2 != 'Japan' || group_stage_winner.grouph1 != 'Colombia' && group_stage_winner.grouph2 == 'Japan' || group_stage_winner.grouph1 == 'Japan' && group_stage_winner.grouph2 == 'Colombia' %>
                 <h5>Group H +2</h5>
             <% elsif group_stage_winner.grouph1 == 'Japan' && group_stage_winner.grouph2 != 'Colombia' || group_stage_winner.grouph1 != 'Japan' && group_stage_winner.grouph2 == 'Colombia' %>
                 <h5>Group H +1</h5>
