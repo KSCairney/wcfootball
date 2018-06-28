@@ -106,6 +106,15 @@
             <% else %>
                 <h5>Group F +0</h5>
             <% end %>
+            <% if group_stage_winner.groupg1 == 'Belgium' && group_stage_winner.groupg2 == 'England' %>
+                <h5>Group G +4</h5>
+            <% elsif group_stage_winner.groupg1 == 'Belgium' && group_stage_winner.groupg2 != 'England' || group_stage_winner.groupg1 != 'Belgium' && group_stage_winner.groupg2 == 'England' || group_stage_winner.groupg1 == 'England' && group_stage_winner.groupg2 == 'Belgium' %>
+                <h5>Group G +2</h5>
+            <% elsif group_stage_winner.groupg1 == 'England' && group_stage_winner.groupg2 != 'Belgium' || group_stage_winner.groupg1 != 'England' && group_stage_winner.groupg2 == 'Belgium' %>
+                <h5>Group G +1</h5>
+            <% else %>
+                <h5>Group G +0</h5>
+            <% end %>
             <% if group_stage_winner.grouph1 == 'Colombia' && group_stage_winner.grouph2 == 'Japan' %>
                 <h5>Group H +4</h5>
             <% elsif group_stage_winner.grouph1 == 'Colombia' && group_stage_winner.grouph2 != 'Japan' || group_stage_winner.grouph1 != 'Colombia' && group_stage_winner.grouph2 == 'Japan' || group_stage_winner.grouph1 == 'Japan' && group_stage_winner.grouph2 == 'Colombia' %>

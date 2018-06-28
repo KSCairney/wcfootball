@@ -36,6 +36,9 @@
             <% end %>
         </div>
         <div class="grpwnnrs bubb">
+            <% @teams.order(:name).where(:name => "Belgium").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
         </div>
         <div class="grpwnnrs buba">
             <% @teams.order(:name).where(:name => "Japan").each do |team| %>
@@ -80,6 +83,9 @@
             <% end %>
         </div>
         <div class="grpwnnrs buba">
+            <% @teams.order(:name).where(:name => "England").each do |team| %>
+                <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+            <% end %>
         </div>
     </div>
 </div>
@@ -357,6 +363,10 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 cntr">
             <h4>Score Breakdown:</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 cntr">
             <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
                 <% if group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 == 'Russia' %>
                     <h5>Group A +4</h5>
@@ -394,6 +404,10 @@
                 <% else %>
                     <h5>Group D +0</h5>
                 <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 cntr">
+            <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
                 <% if group_stage_winner.groupe1 == 'Brazil' && group_stage_winner.groupe2 == 'Switzerland' %>
                     <h5>Group E +4</h5>
                 <% elsif group_stage_winner.groupe1 == 'Brazil' && group_stage_winner.groupe2 != 'Switzerland' || group_stage_winner.groupe1 != 'Brazil' && group_stage_winner.groupe2 == 'Switzerland' || group_stage_winner.groupe1 == 'Switzerland' && group_stage_winner.groupe2 == 'Brazil' %>
@@ -411,6 +425,15 @@
                     <h5>Group F +1</h5>
                 <% else %>
                     <h5>Group F +0</h5>
+                <% end %>
+                <% if group_stage_winner.groupg1 == 'Belgium' && group_stage_winner.groupg2 == 'England' %>
+                    <h5>Group G +4</h5>
+                <% elsif group_stage_winner.groupg1 == 'Belgium' && group_stage_winner.groupg2 != 'England' || group_stage_winner.groupg1 != 'Belgium' && group_stage_winner.groupg2 == 'England' || group_stage_winner.groupg1 == 'England' && group_stage_winner.groupg2 == 'Belgium' %>
+                    <h5>Group G +2</h5>
+                <% elsif group_stage_winner.groupg1 == 'England' && group_stage_winner.groupg2 != 'Belgium' || group_stage_winner.groupg1 != 'England' && group_stage_winner.groupg2 == 'Belgium' %>
+                    <h5>Group G +1</h5>
+                <% else %>
+                    <h5>Group G +0</h5>
                 <% end %>
                 <% if group_stage_winner.grouph1 == 'Colombia' && group_stage_winner.grouph2 == 'Japan' %>
                     <h5>Group H +4</h5>
