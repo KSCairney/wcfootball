@@ -4,6 +4,38 @@
     </div>
 </div>
 <div class="row rslts">
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+       <% @teams.order(:name).where(:name => "France").each do |team| %>
+            <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+        <% end %> 
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
+        
+    </div>
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+</div>
+<div class="row rslts">
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <div class="grpwnnrs bubb">
             <% @teams.order(:name).where(:name => "Uruguay").each do |team| %>
@@ -366,7 +398,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 cntr">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 cntr">
             <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
                 <% if group_stage_winner.groupa1 == 'Uruguay' && group_stage_winner.groupa2 == 'Russia' %>
                     <h5>Group A +4</h5>
@@ -406,7 +438,7 @@
                 <% end %>
             <% end %>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 cntr">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 cntr">
             <% @group_stage_winners.where(:user => user).each do |group_stage_winner| %>
                 <% if group_stage_winner.groupe1 == 'Brazil' && group_stage_winner.groupe2 == 'Switzerland' %>
                     <h5>Group E +4</h5>
@@ -443,6 +475,15 @@
                     <h5>Group H +1</h5>
                 <% else %>
                     <h5>Group H +0</h5>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 cntr">
+            <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+                <% if ko16_winner.c1_v_d2 == 'France' || ko16_winner.d1_v_c2 == 'France' %>
+                    <h5>France Adv QF +4</h5>
+                <% else %>
+                    <h5>France Adv QF +0</h5>
                 <% end %>
             <% end %>
         </div>

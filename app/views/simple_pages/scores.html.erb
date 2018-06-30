@@ -125,6 +125,13 @@
                 <h5>Group H +0</h5>
             <% end %>
         <% end %>
+        <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+            <% if ko16_winner.c1_v_d2 == 'France' || ko16_winner.d1_v_c2 == 'France' %>
+                <h5>France Adv QF +4</h5>
+            <% else %>
+                <h5>France Adv QF +0</h5>
+            <% end %>
+        <% end %>
         <br>
     <% end %>
 <% end %>
