@@ -126,15 +126,25 @@
             <% end %>
         <% end %>
         <% @ko16_winners.where(:user => user).each do |ko16_winner| %>
+            <% if ko16_winner.a1_v_b2 == 'Uruguay' || ko16_winner.b1_v_a2 == 'Uruguay' %>
+                <h5>Uruguay Adv QF +4</h5>
+            <% else %>
+                <h5>Uruguay Adv QF +0</h5>
+            <% end %>
             <% if ko16_winner.c1_v_d2 == 'France' || ko16_winner.d1_v_c2 == 'France' %>
                 <h5>France Adv QF +4</h5>
             <% else %>
                 <h5>France Adv QF +0</h5>
             <% end %>
-            <% if ko16_winner.a1_v_b2 == 'Uruguay' || ko16_winner.b1_v_a2 == 'Uruguay' %>
-                <h5>Uruguay Adv QF +4</h5>
+            <% if ko16_winner.a1_v_b2 == 'Russia' || ko16_winner.b1_v_a2 == 'Russia' %>
+                <h5>Russia Adv QF +4</h5>
             <% else %>
-                <h5>Uruguay Adv QF +0</h5>
+                <h5>Russia Adv QF +0</h5>
+            <% end %>
+            <% if ko16_winner.c1_v_d2 == 'Croatia' || ko16_winner.d1_v_c2 == 'Croatia' %>
+                <h5>Croatia Adv QF +4</h5>
+            <% else %>
+                <h5>Croatia Adv QF +0</h5>
             <% end %>
         <% end %>
         <br>
