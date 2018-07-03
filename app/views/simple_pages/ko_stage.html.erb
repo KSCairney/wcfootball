@@ -38,7 +38,9 @@
         <% end %> 
     </div>
     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 bubb">
-        
+        <% @teams.order(:name).where(:name => "Sweden").each do |team| %>
+            <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+        <% end %> 
     </div>
     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 buba">
         
@@ -515,6 +517,11 @@
                     <h5>Croatia Adv QF +4</h5>
                 <% else %>
                     <h5>Croatia Adv QF +0</h5>
+                <% end %>
+                <% if ko16_winner.e1_v_f2 == 'Sweden' || ko16_winner.f1_v_e2 == 'Sweden' %>
+                    <h5>Sweden Adv QF +4</h5>
+                <% else %>
+                    <h5>Sweden Adv QF +0</h5>
                 <% end %>
             <% end %>
         </div>
