@@ -11,7 +11,9 @@
         <% end %> 
     </div>
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 buba">
-        
+        <% @teams.order(:name).where(:name => "Belgium").each do |team| %>
+            <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+        <% end %> 
     </div>
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 bubb">
@@ -557,6 +559,11 @@
                     <h5>France Adv SF +7</h5>
                 <% else %>
                     <h5>France Adv SF +0</h5>
+                <% end %>
+                <% if qf_winner.qf2_w == 'Belgium' || qf_winner.qf4_w == 'Belgium' %>
+                    <h5>Belgium Adv SF +7</h5>
+                <% else %>
+                    <h5>Belgium Adv SF +0</h5>
                 <% end %>
             <% end %>
         </div>
