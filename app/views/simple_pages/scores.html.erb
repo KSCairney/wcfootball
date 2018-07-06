@@ -167,6 +167,13 @@
                 <h5>England Adv QF +0</h5>
             <% end %>
         <% end %>
+        <% @qf_winners.where(:user => user).each do |qf_winner| %>
+            <% if qf_winner.qf1_w == 'France' || qf_winner.qf3_w == 'France' %>
+                <h5>France Adv SF +7</h5>
+            <% else %>
+                <h5>France Adv SF +0</h5>
+            <% end %>
+        <% end %>
         <br>
     <% end %>
 <% end %>
