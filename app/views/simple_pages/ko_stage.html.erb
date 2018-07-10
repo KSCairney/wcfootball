@@ -3,6 +3,21 @@
         <h3>Real Results:</h3>
     </div>
 </div>
+<div class="row champdisplay">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        
+    </div>
+</div>
+<div class="row rslts">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 bubb">
+        <% @teams.order(:name).where(:name => "France").each do |team| %>
+            <div class="resultrounds spaced"><%= image_tag(team.flag) %> <p><%= team.name %></p></div>
+        <% end %> 
+    </div>
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 buba">
+        
+    </div>
+</div>
 <div class="row rslts">
     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 bubb">
@@ -578,6 +593,13 @@
                     <h5>England Adv SF +7</h5>
                 <% else %>
                     <h5>England Adv SF +0</h5>
+                <% end %>
+                <% @sf_winners.where(:user => user).each do |sf_winner| %>
+                    <% if sf_winner.sf1_w == 'France' || sf_winner.sf2_w == 'France' %>
+                        <h5>France Adv Final +12</h5>
+                    <% else %>
+                        <h5>France Adv Final +0</h5>
+                    <% end %>
                 <% end %>
             <% end %>
         </div>

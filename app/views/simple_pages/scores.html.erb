@@ -188,6 +188,13 @@
             <% else %>
                 <h5>England Adv SF +0</h5>
             <% end %>
+            <% @sf_winners.where(:user => user).each do |sf_winner| %>
+                    <% if sf_winner.sf1_w == 'France' || sf_winner.sf2_w == 'France' %>
+                        <h5>France Adv Final +12</h5>
+                    <% else %>
+                        <h5>France Adv Final +0</h5>
+                    <% end %>
+                <% end %>
         <% end %>
         <br>
     <% end %>
