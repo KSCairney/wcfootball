@@ -5,7 +5,10 @@
 </div>
 <div class="row champdisplay">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        
+        <% @teams.order(:name).where(:name => "France").each do |team| %>
+            <div id="thechamp"><%= image_tag(team.flag) %></div>
+            <div id="thechamp"><%= team.name %></div>
+        <% end %> 
     </div>
 </div>
 <div class="row rslts">
@@ -606,6 +609,13 @@
                         <h5>Croatia Adv Final +12</h5>
                     <% else %>
                         <h5>Croatia Adv Final +0</h5>
+                    <% end %>
+                <% end %>
+                <% @final_winners.where(:user => user).each do |final_winner| %>
+                    <% if final_winner.champion == 'France' %>
+                        <h5>France Wins World Cup +20</h5>
+                    <% else %>
+                        <h5>France Wins World Cup +0</h5>
                     <% end %>
                 <% end %>
             <% end %>
